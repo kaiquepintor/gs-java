@@ -34,10 +34,10 @@ public class SistemaUsuarios {
         email = email.trim();
 
         ClienteDAO clienteDAO = new ClienteDAO();
-        Cliente clienteBanco = clienteDAO.buscarPorLogin(email, senha); // Método no DAO que busca pelo email
+        Cliente clienteBanco = clienteDAO.buscarPorLogin(email, senha);
 
         if (clienteBanco != null && clienteBanco.verificarSenha(senha)) {
-            return clienteBanco; // Login bem-sucedido no banco de dados
+            return clienteBanco;
         }
 
         return null;
